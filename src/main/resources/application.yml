@@ -1,0 +1,18 @@
+server.port: 9090
+spring:
+  application.name: reports
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/internship
+    username: ${DB_UID}
+    password: ${DB_PWD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+#  spring.application.name=reports
+#spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/internship
+#spring.datasource.username=${DB_UID}
+#spring.datasource.password=${DB_PWD}
+#spring.datasource.driver-class-name=org.postgresql.Driver
+#spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
