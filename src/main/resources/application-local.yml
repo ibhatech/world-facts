@@ -1,0 +1,14 @@
+logging:
+  config: classpath:log4j2-local.xml
+spring:
+  thymeleaf:
+    cache: false
+   #prefix: file:src/main/resources/templates   <---  slash was missing . I fixed it
+    prefix: file:src/main/resources/templates/
+    check-template-location: true
+
+  web:
+    resources:
+      static-locations:
+        - file:src/main/resources/static/
+        - classpath:/static/
