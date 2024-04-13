@@ -18,4 +18,10 @@ public class CountriesController {
     model.addAttribute("countries",repo.findAll());
     return "all-countries";
   }
+  @GetMapping("/city-search")
+  public String citySearchForm(Model model) {
+    model.addAttribute("page","city-search");
+    return "default-view";
+  }
+
 }

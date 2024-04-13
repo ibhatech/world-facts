@@ -1,10 +1,12 @@
 logging:
   config: classpath:log4j2-local.xml
+
+livereload.sources: src/main/resources/static/,src/main/resources/templates/
+
 spring:
   devtools:
     livereload:
       enabled: 'true'
-
   thymeleaf:
     cache: 'false'
     prefix: file:src/main/resources/templates/  # trailing '/' is mandatory
