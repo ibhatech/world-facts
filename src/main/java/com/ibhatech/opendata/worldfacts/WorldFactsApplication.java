@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-class WorldFactsApplication {
+public class WorldFactsApplication {
 	static final Logger log = LoggerFactory.getLogger(WorldFactsApplication.class);
 
 	public  static void main(String[] args) {
