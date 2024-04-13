@@ -2,7 +2,7 @@
 <Configuration>
   <Appenders>
     <Console name="Console" target="SYSTEM_OUT">
-      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %50C{1.} %msg%n"/>
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %30C{1.}: %msg%n"/>
     </Console>
   </Appenders>
   <Loggers>
@@ -12,10 +12,10 @@
     <Logger name="org.springframework" level="warn"  additivity="false" >
       <AppenderRef ref="Console" />
     </Logger>
-    <Logger name="org.springframework.boot.autoconfigure.thymeleaf" level="error"  additivity="false" >
+    <Logger name="org.springframework.jdbc" level="warn"  additivity="false" >
       <AppenderRef ref="Console" />
     </Logger>
-    <Logger name="org.thymeleaf" level="error"  additivity="false" >
+    <Logger name="org.h2" level="warn"  additivity="false" >
       <AppenderRef ref="Console" />
     </Logger>
 

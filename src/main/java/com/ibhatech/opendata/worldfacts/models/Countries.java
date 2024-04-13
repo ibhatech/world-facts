@@ -1,4 +1,4 @@
-package com.ibhatech.opendata.reports.models;
+package com.ibhatech.opendata.worldfacts.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,6 +13,13 @@ public class Countries {
     @Column
     @Id
     private String countryCode;
+    @Column
     private String name;
+
+    @Column
+    private String officialName;
+
+    @Column
+    private String citizenName;
 
 }

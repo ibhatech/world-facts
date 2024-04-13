@@ -1,34 +1,42 @@
 <html>
 <head>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/resources/htmx-1.9.11.js"></script>
+  <link href="/styles.css" rel="stylesheet">
+  <script src="/htmx-1.9.11.js"></script>
 
   <title>
-    UK Jobs
+    World facts
   </title>
 </head>
 
 <body>
 <div class="flex flex-row items-center p-6 ">
-  <img src="/resources/logo.svg" width="95" height="30" class="mr-6 "/>
-  <h1 class="text-2xl font-bold text-emerald-600">Countries</h1>
+  <img src="/logo.svg" width="95" height="30" class="mr-2"/>
+  <h1 class="text-2xl font-bold text-emerald-600">World facts</h1>
 </div>
-<a href="/countries" class="text-blue-500 underline font-bold">countries</a>
-
+<div class="flex flex-row p-4">
+  <a href="/" class="ml-4 text-blue-500 underline font-bold mr-2">Home</a>
+  <a href="/countries" class="text-blue-500 underline font-bold mr-2">Countries</a>
+</div>
 <h2 class="font-bold text-emerald-600 text-xl m-6">Table of Countries</h2>
 <th:block th:if="${countries}">
-  <table>
+  <table class="ml-6 md:table-fixed">
     <thead>
-      <th>Country code</th>
-      <th>Country Name</th>
+      <tr>
+        <th>Country code</th>
+        <th>Country Name</th>
+      </tr>
     </thead>
     <tbody>
-      <tr th:each="c : ${countries}">
+      <tr th:each="c : ${countries}" >
         <td th:text="${c.countryCode}"></td>
-        <td th:text="${c.name}"></td>
+        <td th:text="${c.name}" ></td>
       </tr>
     </tbody>
   </table>
 </th:block>
+<footer>
+
+</footer>
 </body>
+<script th:if="${@environment.acceptsProfiles('dev','local')}" src="http://localhost:35729/livereload.js"></script>
 </html>

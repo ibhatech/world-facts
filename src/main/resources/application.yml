@@ -1,13 +1,15 @@
-server.port: 9090
+server:
+  port: 9090
+  error:
+    path: /error
+    whitelabel:
+      enabled: false
 spring:
   application.name: reports
-  datasource:
-    url: ${DB_URL}
-    username: ${DB_UID}
-    password: ${DB_PWD}
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-  mvc:
-    static-path-pattern: /resources/**
 
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+#  mvc:
+#    static-path-pattern: /resources/**

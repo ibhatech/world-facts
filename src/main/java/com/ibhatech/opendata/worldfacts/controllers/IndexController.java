@@ -1,4 +1,4 @@
-package com.ibhatech.opendata.reports.controllers;
+package com.ibhatech.opendata.worldfacts.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

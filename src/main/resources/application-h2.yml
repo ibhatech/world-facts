@@ -1,0 +1,13 @@
+
+spring:
+  datasource:
+    embedded-database-connection: h2
+    url: jdbc:h2:mem:myapp;DB_CLOSE_ON_EXIT=FALSE;MODE=POSTGRESQL
+    username: sa
+    driver-class-name: org.h2.Driver
+  sql:
+    init:
+      schema-locations: optional:classpath*:schema-h2.sql
+      data-locations: optional:classpath*:data-h2.sql
+      continue-on-error: false
+    defer-datasource-initialization: false

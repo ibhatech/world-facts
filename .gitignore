@@ -38,3 +38,5 @@ out/
 
 ### Kotlin ###
 .kotlin
+tailwind-css-styles/node_modules
+tailwind-css-styles/package-lock.json

@@ -1,6 +1,5 @@
-package com.ibhatech.opendata.reports
+package com.ibhatech.opendata.worldfacts
 
-import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
